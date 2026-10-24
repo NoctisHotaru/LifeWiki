@@ -3,11 +3,11 @@ site_description: 一份写给普通人的生活指南知识库
 site_author: Life Wiki
 
 # 网站正式发布后的地址（绑定自己的域名后，这里要同步改）
-site_url: https://wmz2648867302-jpg.github.io/LifeWiki/
+site_url: https://noctishotaru.github.io/LifeWiki/
 
 # 源码仓库地址（页面右上角会显示入口）
-repo_url: https://github.com/wmz2648867302-jpg/LifeWiki
-repo_name: wmz2648867302-jpg/LifeWiki
+repo_url: https://github.com/NoctisHotaru/LifeWiki
+repo_name: NoctisHotaru/LifeWiki
 
 # 关掉“编辑本页”按钮（本站不做在线编辑）
 edit_uri: ""

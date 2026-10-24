@@ -1,0 +1,41 @@
+name: 部署 Life Wiki
+
+# 什么时候自动运行：每次推送到 main 分支，或在 GitHub 网页上手动点击运行
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+# 允许工作流向仓库写入内容（发布到 gh-pages 分支需要这个权限）
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # 1. 把仓库里的代码取到构建机器上
+      - name: 检出代码
+        uses: actions/checkout@v4
+
+      # 2. 准备 Python 环境
+      - name: 安装 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # 3. 安装与你本地完全相同的 MkDocs 与主题版本，避免样式不一致
+      - name: 安装 MkDocs 与 Material 主题
+        run: pip install "mkdocs-material==9.7.7"
+
+      # 4. 把 Markdown 构建成静态网页，产物在 site/ 目录
+      - name: 构建站点
+        run: mkdocs build
+
+      # 5. 把 site/ 推送到 gh-pages 分支，由 GitHub Pages 对外提供访问
+      - name: 发布到 gh-pages 分支
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./site

@@ -1,0 +1,78 @@
+site_name: Life Wiki
+site_description: 一份写给普通人的生活指南知识库
+site_author: Life Wiki
+
+# 网站正式发布后的地址（绑定自己的域名后，这里要同步改）
+site_url: https://wmz2648867302-jpg.github.io/LifeWiki/
+
+# 源码仓库地址（页面右上角会显示入口）
+repo_url: https://github.com/wmz2648867302-jpg/LifeWiki
+repo_name: wmz2648867302-jpg/LifeWiki
+
+# 关掉“编辑本页”按钮（本站不做在线编辑）
+edit_uri: ""
+
+extra_css:
+  - stylesheets/extra.css
+
+nav:
+  - 首页: index.md
+  - 出行指南:
+      - 高铁乘坐指南: high-speed-rail/index.md
+      - 地铁乘坐指南: metro/index.md
+      - 飞机乘坐指南: flight/index.md
+  - 生活与求助:
+      - 如何配眼镜: glasses/index.md
+      - 贫困生如何利用资源: student-resources/index.md
+      - 突遇变故如何求助: emergency-help/index.md
+
+theme:
+  name: material
+  language: zh
+  font: false
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: 跟随系统
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/weather-sunny
+        name: 切换到深色模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/weather-night
+        name: 切换到浅色模式
+  features:
+    - navigation.tracking
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+    - search.suggest
+    - search.highlight
+
+plugins:
+  - search:
+      separator: '[\s\u200b\-]'
+      lang:
+        - zh
+        - en
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - def_list
+  - footnotes
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - pymdownx.details
+  - pymdownx.superfences

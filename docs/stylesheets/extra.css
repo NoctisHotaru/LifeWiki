@@ -1,0 +1,90 @@
+/* ===== 中文字体：优先使用各系统自带的中文黑体 ===== */
+.md-typeset {
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei",
+    "Noto Sans SC", "Segoe UI", Roboto, sans-serif;
+  line-height: 1.85;
+  letter-spacing: 0.01em;
+}
+
+/* ===== 段落与列表：拉开呼吸感，适合中文长阅读 ===== */
+.md-typeset p {
+  margin: 0.9em 0;
+}
+
+.md-typeset li {
+  margin-bottom: 0.35em;
+}
+
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3 {
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.md-typeset h1 {
+  margin-bottom: 1em;
+}
+
+.md-typeset h2 {
+  margin-top: 2em;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+}
+
+/* ===== 图片：不超出屏幕、圆角、轻阴影 ===== */
+.md-typeset img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* ===== 表格：手机端可横向滑动，不撑破页面 ===== */
+@media screen and (max-width: 44.9375em) {
+  .md-typeset table:not([class]) {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+/* ===== 手机端：收紧左右留白，让正文更宽一点 ===== */
+@media screen and (max-width: 44.9375em) {
+  .md-content__inner {
+    padding: 0 0.8rem 1.2rem;
+  }
+}
+
+/* ===== 手机端导航：改为「原地展开 + 二级缩进」，不再滑到新的一屏 ===== */
+@media screen and (max-width: 76.1875em) {
+  /* 1. 把默认的下钻浮层面板改回普通排布 */
+  .md-nav--primary .md-nav__item--nested > .md-nav {
+    position: static !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    height: auto !important;
+    transform: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: none;
+    margin-left: 0.6rem;
+    padding-left: 0.8rem;
+    border-left: 2px solid var(--md-default-fg-color--lightest);
+  }
+
+  /* 2. 点击栏目名（勾选）时才展开子项 */
+  .md-nav--primary .md-nav__item--nested > .md-nav__toggle:checked ~ .md-nav {
+    display: block;
+  }
+
+  /* 3. 二级目录字号略小，层级更清楚 */
+  .md-nav--primary .md-nav__item--nested > .md-nav .md-nav__link {
+    font-size: 0.7rem;
+  }
+
+  /* 4. 不再换屏，隐藏多余的面板标题栏 */
+  .md-nav--primary .md-nav .md-nav__title {
+    display: none !important;
+  }
+}

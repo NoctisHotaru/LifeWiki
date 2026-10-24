@@ -1,0 +1,18 @@
+# ===== Python 虚拟环境：本机专用，体积很大，不上传 =====
+.venv/
+__pycache__/
+*.py[cod]
+
+# ===== 构建产物：由 GitHub Actions 自动生成，不上传 =====
+site/
+
+# ===== 操作系统与编辑器产生的杂项文件 =====
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+
+# ===== 临时文件 =====
+*.tmp
+*.log

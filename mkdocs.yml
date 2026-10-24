@@ -34,6 +34,7 @@ nav:
       - 突遇变故如何求助: emergency-help/index.md
   - 一些思考:
       - 为什么大家都这么厉害，为什么我什么都不会: thoughts/feeling-left-behind.md
+      - AI 时代我该何去何从: thoughts/ai-era.md
 
 theme:
   name: material

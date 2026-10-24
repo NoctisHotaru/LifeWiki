@@ -27,14 +27,14 @@ nav:
       - 什么是恋爱: emotions/what-is-love.md
       - 健康的恋爱关系是怎样的: emotions/healthy-relationship.md
       - 我总是非常在意他/她的行为，影响到我学习了，该如何解决: emotions/overthinking-partner.md
-  - 一些思考:
-      - 为什么大家都这么厉害，为什么我什么都不会: thoughts/feeling-left-behind.md
   - 人际关系:
       - 如何看待人际关系: social/understanding-relationships.md
       - 如何处理人际关系: social/handling-relationships.md
   - 生活与求助:
       - 贫困生如何利用资源: student-resources/index.md
       - 突遇变故如何求助: emergency-help/index.md
+  - 一些思考:
+      - 为什么大家都这么厉害，为什么我什么都不会: thoughts/feeling-left-behind.md
 
 theme:
   name: material
